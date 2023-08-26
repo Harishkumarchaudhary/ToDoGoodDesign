@@ -4,3 +4,4 @@
 4. Do nodemon index.js
 5. Add task and delete them on localhost:8000/
 6. Verify the data by seeing it in Robo3T and on the website too :) 
+7. I have attached the screenshot of how the web page looks like in /assets/images too:)
