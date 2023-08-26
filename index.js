@@ -16,8 +16,8 @@ app.get('/', function(req, res){
     //Fetch from db
     ToDoTask.find({}).then((toDoTasks)=>{
         return res.render('home', {
-            title: "My Tasks List",
-            toDoTasks: toDoTasks
+            title: "TODO App",
+            todo_list: toDoTasks
         });
     }).catch((err)=>{
         console.log('error in fetching toDoTasks from db');
@@ -42,11 +42,12 @@ app.get('/delete-task/', function(req, res){
     
 });
 
-app.post('/create-task/', function(req, res){
+app.post('/create-task', function(req, res){
+    console.log('req body is', req.body);
    ToDoTask.create({
-    name: req.query.description,
-    phone: req.query.category,
-    completionDate: req.query.completion_date
+    description: req.body.description,
+    category: req.body.category,
+    completion_date: req.body.completion_date
    }).then((newTask)=>{
        console.log('****', newTask);
        return res.redirect('/')
