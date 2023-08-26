@@ -15,11 +15,11 @@
                 <form action="/create-task" method="post">
                   <div class="form-group">
                     <label for="description">Description</label>
-                    <textarea name = "description" id="textarea" rows="4" placeholder="What do you need to do?"></textarea>
+                    <textarea name = "description" id="textarea" rows="4" placeholder="What do you need to do?" required></textarea>
                   </div>
                   <div class="form-group">
                     <label for="category">Choose a category:</label>
-                    <select id="category" name="category">
+                    <select id="category" name="category" required>
                       <option value="School">School</option>
                       <option value="Work">Work</option>
                       <option value="Personal">Personal</option>
@@ -28,7 +28,7 @@
                   </div>
                   <div class="form-group">
                     <label for="date">Due Date</label>
-                    <input type="date" id="date" name="completion_date">
+                    <input type="date" id="date" name="completion_date" required>
                   </div>
                   <button type="submit">Submit</button>
                 </form>
