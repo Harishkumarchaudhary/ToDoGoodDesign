@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>
+            <%=locals.title %>
+        </title>
+ 
+        <!-- Our style sheet should be below other styles to override them -->
+        <link rel="stylesheet" type="text/css" href="/css/home.css">
+    </head>
+    <body>
+        <h1 style="text-align: center;">ToDo App</h1>
+
+        <div class = "todo-container">
+            <div class="form-container">
+                <form>
+                  <div class="form-group">
+                    <label for="textarea">Description</label>
+                    <textarea id="textarea" rows="4" placeholder="What do you need to do?"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="category">Choose a category:</label>
+                    <select id="category">
+                      <option value="school">School</option>
+                      <option value="work">Work</option>
+                      <option value="personal">Personal</option>
+                      <option value="others">Others</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="date">Due Date</label>
+                    <input type="date" id="date">
+                  </div>
+                  <button type="submit">Submit</button>
+                </form>
+              </div>
+        </div>
+
+        
+        <div class="list-container">
+            <div class="list-item">
+                <div>
+                  <p>Task 1</p>
+                </div>
+                <div>
+                  <button>Category</button>
+                </div>
+                <div>
+                  <p>Date: August 26, 2023</p>
+                </div>
+                <div>
+                  <button>Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>
